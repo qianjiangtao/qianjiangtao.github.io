@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/ 3.启动consul 1consul ag">
+<meta name="description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/">
 <meta name="keywords" content="consul">
 <meta property="og:type" content="article">
 <meta property="og:title" content="consul安装">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/10/31/consul安装/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/ 3.启动consul 1consul ag">
+<meta property="og:description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/consul/1540950161859.png">
-<meta property="og:updated_time" content="2018-10-31T01:54:31.886Z">
+<meta property="og:updated_time" content="2018-10-31T02:00:27.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="consul安装">
-<meta name="twitter:description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/ 3.启动consul 1consul ag">
+<meta name="twitter:description" content="一,consul安装(单机)1.下载consul zip包(地址)，本人选择的是consul_1.3.0_linux_386.zip这个版本 2.解压zip,并将解压后的consul拷贝到/usr/local/bin/目录下方便使用 12unzip consul_1.3.0_linux_386.zipmv consul   /usr/locao/bin/">
 <meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/consul/1540950161859.png">
 
 
@@ -344,7 +344,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-31T09:54:31+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-31T10:00:27+08:00">
                 2018-10-31
               </time>
             
@@ -434,6 +434,7 @@
         <h2 id="一-consul安装-单机"><a href="#一-consul安装-单机" class="headerlink" title="一,consul安装(单机)"></a>一,consul安装(单机)</h2><p>1.下载consul zip包(<a href="https://www.consul.io/" target="_blank" rel="noopener">地址</a>)，本人选择的是<code>consul_1.3.0_linux_386.zip</code>这个版本</p>
 <p>2.解压zip,并将解压后的consul拷贝到<code>/usr/local/bin/</code>目录下方便使用</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">unzip consul_1.3.0_linux_386.zip</span><br><span class="line">mv consul   /usr/locao/bin/</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>3.启动consul</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">consul agent -dev</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">2018/10/30 15:53:52 [DEBUG] agent: Using random ID "7e72c970-eb83-5d77-9d9b-9a1869632e9c" as node ID</span><br><span class="line">2018/10/30 15:53:52 [INFO] raft: Initial configuration (index=1): [&#123;Suffrage:Voter ID:7e72c970-eb83-5d77-9d9b-9a1869632e9c Address:127.0.0.1:8300&#125;]</span><br><span class="line">2018/10/30 15:53:52 [INFO] serf: EventMemberJoin: lvmama05.dc1 127.0.0.1</span><br><span class="line">2018/10/30 15:53:52 [INFO] serf: EventMemberJoin: lvmama05 127.0.0.1</span><br><span class="line">2018/10/30 15:53:52 [INFO] agent: Started DNS server 127.0.0.1:8600 (udp)</span><br><span class="line">2018/10/30 15:53:52 [INFO] raft: Node at 127.0.0.1:8300 [Follower] entering Follower state (Leader: "")</span><br><span class="line">2018/10/30 15:53:52 [INFO] consul: Adding LAN server lvmama05 (Addr: tcp/127.0.0.1:8300) (DC: dc1)</span><br><span class="line">2018/10/30 15:53:52 [INFO] consul: Handled member-join event for server "lvmama05.dc1" in area "wan"</span><br><span class="line">2018/10/30 15:53:52 [DEBUG] agent/proxy: managed Connect proxy manager started</span><br><span class="line">2018/10/30 15:53:52 [INFO] agent: Started DNS server 127.0.0.1:8600 (tcp)</span><br><span class="line">2018/10/30 15:53:52 [INFO] agent: Started HTTP server on 127.0.0.1:8500 (tcp)</span><br><span class="line">2018/10/30 15:53:52 [INFO] agent: started state syncer</span><br><span class="line">2018/10/30 15:53:52 [INFO] agent: Started gRPC server on 127.0.0.1:8502 (tcp)</span><br><span class="line">2018/10/30 15:53:52 [WARN] raft: Heartbeat timeout from "" reached, starting election</span><br><span class="line">2018/10/30 15:53:52 [INFO] raft: Node at 127.0.0.1:8300 [Candidate] entering Candidate state in term 2</span><br><span class="line">2018/10/30 15:53:52 [DEBUG] raft: Votes needed: 1</span><br><span class="line">2018/10/30 15:53:52 [DEBUG] raft: Vote granted from 7e72c970-eb83-5d77-9d9b-9a1869632e9c in term 2. Tally: 1</span><br><span class="line">2018/10/30 15:53:52 [INFO] raft: Election won. Tally: 1</span><br><span class="line">2018/10/30 15:53:52 [INFO] raft: Node at 127.0.0.1:8300 [Leader] entering Leader state</span><br><span class="line">2018/10/30 15:53:52 [INFO] consul: cluster leadership acquired</span><br><span class="line">2018/10/30 15:53:52 [INFO] connect: initialized CA with provider "consul"</span><br><span class="line">2018/10/30 15:53:52 [DEBUG] consul: Skipping self join check for "lvmama05" since the cluster is too small</span><br><span class="line">2018/10/30 15:53:52 [INFO] consul: member 'lvmama05' joined, marking health alive</span><br><span class="line">2018/10/30 15:53:52 [INFO] consul: New leader elected: lvmama05</span><br><span class="line">2018/10/30 15:53:53 [DEBUG] agent: Skipping remote check "serfHealth" since it is managed automatically</span><br><span class="line">2018/10/30 15:53:53 [INFO] agent: Synced node info</span><br><span class="line">2018/10/30 15:53:54 [DEBUG] agent: Skipping remote check "serfHealth" since it is managed automatically</span><br><span class="line">2018/10/30 15:53:54 [DEBUG] agent: Node info in sync</span><br><span class="line">2018/10/30 15:53:54 [DEBUG] agent: Node info in sync</span><br></pre></td></tr></table></figure>
