@@ -123,18 +123,17 @@
 
 
 
-<meta name="description" content="问题说明: ​    如题，最近在项目中使用拦截器判断用户是否登录，因为本项目后台的访问路径是http://域名/user-center/pointxxx/...，我想只拦截匹配/point，但是发现拦截器只有设置为/**的访问路径,拦截器才能生效，百度谷歌都没查到相关的说明(可能有没找到)，后来看源码分析发现是自己的写法有问题，下面就记录下详细分析的过程。">
 <meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot拦截器不生效分析">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/08/24/Spring-Boot拦截器不生效分析/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="问题说明: ​    如题，最近在项目中使用拦截器判断用户是否登录，因为本项目后台的访问路径是http://域名/user-center/pointxxx/...，我想只拦截匹配/point，但是发现拦截器只有设置为/**的访问路径,拦截器才能生效，百度谷歌都没查到相关的说明(可能有没找到)，后来看源码分析发现是自己的写法有问题，下面就记录下详细分析的过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T01:55:51.709Z">
+<meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-55.jpg">
+<meta property="og:updated_time" content="2018-11-01T06:07:06.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot拦截器不生效分析">
-<meta name="twitter:description" content="问题说明: ​    如题，最近在项目中使用拦截器判断用户是否登录，因为本项目后台的访问路径是http://域名/user-center/pointxxx/...，我想只拦截匹配/point，但是发现拦截器只有设置为/**的访问路径,拦截器才能生效，百度谷歌都没查到相关的说明(可能有没找到)，后来看源码分析发现是自己的写法有问题，下面就记录下详细分析的过程。">
+<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-55.jpg">
 
 
 
@@ -386,8 +385,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-27T09:55:51+08:00">
-                2018-08-27
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T14:07:06+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -473,9 +472,10 @@
       
 
       
-        <p><strong>问题说明:</strong></p>
-<p>​    如题，最近在项目中使用拦截器判断用户是否登录，因为本项目后台的访问路径是<code>http://域名/user-center/pointxxx/...</code>，我想只拦截匹配/point，但是发现拦截器只有设置为<code>/**</code>的访问路径,拦截器才能生效，百度谷歌都没查到相关的说明(<em>可能有没找到</em>)，后来看源码分析发现是自己的写法有问题，下面就记录下详细分析的过程。</p>
+        <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-55.jpg" alt=""></p>
 <a id="more"></a>
+<p><strong>问题说明:</strong></p>
+<p>​    如题，最近在项目中使用拦截器判断用户是否登录，因为本项目后台的访问路径是<code>http://域名/user-center/pointxxx/...</code>，我想只拦截匹配/point，但是发现拦截器只有设置为<code>/**</code>的访问路径,拦截器才能生效，百度谷歌都没查到相关的说明(<em>可能有没找到</em>)，后来看源码分析发现是自己的写法有问题，下面就记录下详细分析的过程。</p>
 <h4 id="1-最开始错误的写法"><a href="#1-最开始错误的写法" class="headerlink" title="1.最开始错误的写法"></a>1.最开始错误的写法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebConfiguration</span> <span class="keyword">extends</span> <span class="title">WebMvcConfigurerAdapter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addInterceptor(<span class="keyword">new</span> LoginInterceptor()).addPathPatterns(<span class="string">"/user-center/point/**"</span>);</span><br><span class="line">        <span class="keyword">super</span>.addInterceptors(registry);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="2-分析无法拦截的原因"><a href="#2-分析无法拦截的原因" class="headerlink" title="2.分析无法拦截的原因"></a>2.分析无法拦截的原因</h4><p>拦截器无法拦截的原因无非就是两个原因:</p>
 <ul>

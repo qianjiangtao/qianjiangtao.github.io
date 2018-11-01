@@ -123,18 +123,17 @@
 
 
 
-<meta name="description" content="一.本地代码更新冲突1.本地的所有修改就都被暂时存储起来 ,放入暂存区 1$ git stash 2.更新远程仓库最新代码 1$ git pull">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用技巧">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/08/22/Git常用技巧/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="一.本地代码更新冲突1.本地的所有修改就都被暂时存储起来 ,放入暂存区 1$ git stash 2.更新远程仓库最新代码 1$ git pull">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-22T06:22:45.249Z">
+<meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-57.jpg">
+<meta property="og:updated_time" content="2018-11-01T06:08:13.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用技巧">
-<meta name="twitter:description" content="一.本地代码更新冲突1.本地的所有修改就都被暂时存储起来 ,放入暂存区 1$ git stash 2.更新远程仓库最新代码 1$ git pull">
+<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-57.jpg">
 
 
 
@@ -386,8 +385,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-22T14:22:45+08:00">
-                2018-08-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T14:08:13+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -473,11 +472,12 @@
       
 
       
-        <h4 id="一-本地代码更新冲突"><a href="#一-本地代码更新冲突" class="headerlink" title="一.本地代码更新冲突"></a>一.本地代码更新冲突</h4><p>1.本地的所有修改就都被暂时存储起来 ,放入暂存区</p>
+        <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-57.jpg" alt=""></p>
+<a id="more"></a>
+<h4 id="一-本地代码更新冲突"><a href="#一-本地代码更新冲突" class="headerlink" title="一.本地代码更新冲突"></a>一.本地代码更新冲突</h4><p>1.本地的所有修改就都被暂时存储起来 ,放入暂存区</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git stash</span><br></pre></td></tr></table></figure>
 <p>2.更新远程仓库最新代码</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git pull</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>3.将本地之前暂存区代码弹出</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git stash pop stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//意思就是系统自动合并修改的内容，但是其中有冲突，需要解决其中的冲突。</span></span><br><span class="line"><span class="comment">//系统提示如下类似的信息：</span></span><br><span class="line">Auto-merging c/environ.cCONFLICT (content): Merge conflict in c/environ.c</span><br></pre></td></tr></table></figure>

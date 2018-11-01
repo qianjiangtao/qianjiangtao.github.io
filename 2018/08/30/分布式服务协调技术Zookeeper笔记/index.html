@@ -123,14 +123,13 @@
 
 
 
-<meta name="description" content="分布式系统什么是分布式系统​    分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是利用更多的机器，处理更多的数据。 简单的说如下图，我们将三个机器通过网络将其连在一起构成一个用户服务，对于调用方来说这个系统是透明的跟调用单台服务没什么区别，我们就可以把这种系统称作一个">
 <meta name="keywords" content="Zookeeper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分布式服务协调技术Zookeeper笔记">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/08/30/分布式服务协调技术Zookeeper笔记/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="分布式系统什么是分布式系统​    分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是利用更多的机器，处理更多的数据。 简单的说如下图，我们将三个机器通过网络将其连在一起构成一个用户服务，对于调用方来说这个系统是透明的跟调用单台服务没什么区别，我们就可以把这种系统称作一个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-56.jpg">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535597734365.png">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535599394301.png">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535619831686.png">
@@ -144,11 +143,10 @@
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1536026983469.png">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535968231731.png">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535968600272.png">
-<meta property="og:updated_time" content="2018-09-04T02:36:15.382Z">
+<meta property="og:updated_time" content="2018-11-01T06:06:19.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分布式服务协调技术Zookeeper笔记">
-<meta name="twitter:description" content="分布式系统什么是分布式系统​    分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是利用更多的机器，处理更多的数据。 简单的说如下图，我们将三个机器通过网络将其连在一起构成一个用户服务，对于调用方来说这个系统是透明的跟调用单台服务没什么区别，我们就可以把这种系统称作一个">
-<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535597734365.png">
+<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-56.jpg">
 
 
 
@@ -400,8 +398,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T10:36:15+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T14:06:19+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -487,8 +485,9 @@
       
 
       
-        <h3 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h3><h4 id="什么是分布式系统"><a href="#什么是分布式系统" class="headerlink" title="什么是分布式系统"></a>什么是分布式系统</h4><p>​    分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是<strong>利用更多的机器，处理更多的数据</strong>。 简单的说如下图，我们将三个机器通过网络将其连在一起构成一个用户服务，对于调用方来说这个系统是透明的跟调用单台服务没什么区别，我们就可以把这种系统称作一个<strong>分布式系统</strong>。 </p>
-<p>​    <a id="more"></a></p>
+        <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-56.jpg" alt=""></p>
+<a id="more"></a>
+<h3 id="分布式系统"><a href="#分布式系统" class="headerlink" title="分布式系统"></a>分布式系统</h3><h4 id="什么是分布式系统"><a href="#什么是分布式系统" class="headerlink" title="什么是分布式系统"></a>什么是分布式系统</h4><p>​    分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是<strong>利用更多的机器，处理更多的数据</strong>。 简单的说如下图，我们将三个机器通过网络将其连在一起构成一个用户服务，对于调用方来说这个系统是透明的跟调用单台服务没什么区别，我们就可以把这种系统称作一个<strong>分布式系统</strong>。 </p>
 <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/zookeeper/1535597734365.png" alt="1535597734365"></p>
 <p>​    那么分布式系统怎么将任务分发到这些计算机节点呢，很简单的思想，分而治之，即分片（<strong>partition）</strong>。对于计算，那么就是对计算任务进行切换，每个节点算一些，最终汇总就行了，这就是<code>MapReduce</code>的思想；对于存储，更好理解一下，每个节点存一部分数据就行了。当数据规模变大的时候，Partition是唯一的选择，同时也会带来一些好处： </p>
 <ul>

@@ -123,18 +123,17 @@
 
 
 
-<meta name="description" content="1. docker安装步骤(基于yum方式)1.1 查看当前linux内核版本 uname -r #linux内核要求3.10及以上 1.2 更行yum源 sudo yum update">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一.Docker安装">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/08/21/一.Docker安装/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="1. docker安装步骤(基于yum方式)1.1 查看当前linux内核版本 uname -r #linux内核要求3.10及以上 1.2 更行yum源 sudo yum update">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-21T07:34:01.880Z">
+<meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-54.jpg">
+<meta property="og:updated_time" content="2018-11-01T06:04:40.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一.Docker安装">
-<meta name="twitter:description" content="1. docker安装步骤(基于yum方式)1.1 查看当前linux内核版本 uname -r #linux内核要求3.10及以上 1.2 更行yum源 sudo yum update">
+<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-54.jpg">
 
 
 
@@ -386,8 +385,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-21T15:34:01+08:00">
-                2018-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T14:04:40+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -473,12 +472,13 @@
       
 
       
-        <h3 id="1-docker安装步骤-基于yum方式"><a href="#1-docker安装步骤-基于yum方式" class="headerlink" title="1. docker安装步骤(基于yum方式)"></a>1. docker安装步骤(基于yum方式)</h3><p>1.1 查看当前linux内核版本</p>
+        <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-13-54.jpg" alt=""></p>
+<a id="more"></a>
+<h3 id="1-docker安装步骤-基于yum方式"><a href="#1-docker安装步骤-基于yum方式" class="headerlink" title="1. docker安装步骤(基于yum方式)"></a>1. docker安装步骤(基于yum方式)</h3><p>1.1 查看当前linux内核版本</p>
 <pre><code>uname -r #linux内核要求3.10及以上
 </code></pre><p>1.2 更行yum源</p>
 <pre><code>sudo yum update 
-</code></pre><a id="more"></a>
-<p>1.3 如果安装过旧版本的话，卸载旧版本</p>
+</code></pre><p>1.3 如果安装过旧版本的话，卸载旧版本</p>
 <pre><code>sudo yum remove docker  docker-common docker-selinux docker-engine
 </code></pre><p>1.4  安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的 </p>
 <pre><code>sudo yum install -y yum-utils device-mapper-persistent-data lvm2 

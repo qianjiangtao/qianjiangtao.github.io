@@ -123,20 +123,18 @@
 
 
 
-<meta name="description" content="consul key/value使用（命令使用） 1.查看全部key/value  12# ?recurse参数指定查询多个kvcurl -v http://localhost:8500/v1/kv/?recurse 1234567891011121314151617* About to connect() to localhost port 8500 (#0)*   Trying ::1...*">
 <meta name="keywords" content="consul">
 <meta property="og:type" content="article">
 <meta property="og:title" content="consul简单使用">
 <meta property="og:url" content="https://qianjiangtao.github.io/2018/10/31/consul简单使用/index.html">
 <meta property="og:site_name" content="博观而约取">
-<meta property="og:description" content="consul key/value使用（命令使用） 1.查看全部key/value  12# ?recurse参数指定查询多个kvcurl -v http://localhost:8500/v1/kv/?recurse 1234567891011121314151617* About to connect() to localhost port 8500 (#0)*   Trying ::1...*">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-14-19.jpg">
 <meta property="og:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/consul/1540954148780.png">
-<meta property="og:updated_time" content="2018-10-31T05:38:26.298Z">
+<meta property="og:updated_time" content="2018-11-01T06:21:55.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="consul简单使用">
-<meta name="twitter:description" content="consul key/value使用（命令使用） 1.查看全部key/value  12# ?recurse参数指定查询多个kvcurl -v http://localhost:8500/v1/kv/?recurse 1234567891011121314151617* About to connect() to localhost port 8500 (#0)*   Trying ::1...*">
-<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/consul/1540954148780.png">
+<meta name="twitter:image" content="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-14-19.jpg">
 
 
 
@@ -388,8 +386,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-31T13:38:26+08:00">
-                2018-10-31
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-01T14:21:55+08:00">
+                2018-11-01
               </time>
             
           </span>
@@ -475,7 +473,9 @@
       
 
       
-        <p>consul key/value使用（命令使用）</p>
+        <p><img src="https://gitee.com/qianjiangtao/my-image/raw/master/blog/2018-11-1-14-19.jpg" alt=""></p>
+<a id="more"></a>
+<p>consul key/value使用（命令使用）</p>
 <p>1.查看全部key/value </p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> ?recurse参数指定查询多个kv</span><br><span class="line">curl -v http://localhost:8500/v1/kv/?recurse</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">* About to connect() to localhost port 8500 (#0)</span><br><span class="line">*   Trying ::1...</span><br><span class="line">* Connected to localhost (::1) port 8500 (#0)</span><br><span class="line">&gt; GET /v1/kv/?recurse HTTP/1.1</span><br><span class="line">&gt; User-Agent: curl/7.29.0</span><br><span class="line">&gt; Host: localhost:8500</span><br><span class="line">&gt; Accept: */*</span><br><span class="line">&gt; </span><br><span class="line">&lt; HTTP/1.1 404 Not Found</span><br><span class="line">&lt; Vary: Accept-Encoding</span><br><span class="line">&lt; X-Consul-Index: 1</span><br><span class="line">&lt; X-Consul-Knownleader: true</span><br><span class="line">&lt; X-Consul-Lastcontact: 0</span><br><span class="line">&lt; Date: Wed, 31 Oct 2018 02:18:12 GMT</span><br><span class="line">&lt; Content-Length: 0</span><br><span class="line">&lt; </span><br><span class="line">* Connection #0 to host localhost left intact</span><br></pre></td></tr></table></figure>
